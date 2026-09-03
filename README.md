@@ -13,6 +13,9 @@ import pprint
 import json
 ```
 
+## Code Documentation / Thought Process 
+[Technical Blog / Article](https://medium.com/@dominusabat/palo-alto-rest-api-address-capacity-count-0b2854b91951)
+
 ## Usage
 ```
 #define the list of hostnames/IP that the script will log into
