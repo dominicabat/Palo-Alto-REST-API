@@ -15,7 +15,7 @@ for device in devices:
     url_add = f"https://{device}/restapi/v10.1/Objects/Addresses?location=vsys&vsys=vsys1"
     url_addgrp = f"https://{device}/restapi/v10.1/Objects/AddressGroups?location=vsys&vsys=vsys1"
     url_edl = f"https://{device}/restapi/v10.1/Objects/ExternalDynamicLists?location=vsys&vsys=vsys1"
-    #In production, I would change the API/URL to https://{device}/restapi/v10.1/Objects/ExternalDynamicLists?location=panorama-pushed, this would query the objects that came from panorama instead of the locally created ones. 
+    #In production, I would change the API/URL to https://{device}/restapi/v10.1/Objects/ExternalDynamicLists?location=panorama-pushed&vsys=vsys1, this would query the objects that came from panorama instead of the locally created ones. 
 
 
     #dyn_count is the number of Address Groups that are classified as Dynamic. Dynamic is the one counted (not static) when accounting for the total Address Capacity of the firewall. 
