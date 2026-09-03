@@ -23,4 +23,4 @@ python palo_restapi.py
 ```
 
 # Author
-[John Dominic Abat] (https://github.com/dominicabat/)
+[John Dominic Abat](https://github.com/dominicabat/)
