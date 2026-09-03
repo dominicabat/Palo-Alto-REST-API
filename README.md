@@ -19,7 +19,7 @@ import json
 devices = ['192.168.100.27', '192.168.100.27']
 
 #cmd:
-python palo_restapi.py
+python palo_restapi_add-cap-count.py
 ```
 
 # Author
