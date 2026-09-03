@@ -25,13 +25,13 @@ for device in devices:
 
 
     #define the https request and store them as dictionary value. This collects the Address, Address Gpoups, and EDL count of the firewall.
-    response_add = requests.request("GET", url_add, headers=headers,verify=False,auth=HTTPBasicAuth('admin','123Cisco123'))
+    response_add = requests.request("GET", url_add, headers=headers,verify=False,auth=HTTPBasicAuth('admin','password'))
     response_dict_add = json.loads(response_add.text)
 
-    response_grp = requests.request("GET", url_addgrp, headers=headers,verify=False,auth=HTTPBasicAuth('admin','123Cisco123'))
+    response_grp = requests.request("GET", url_addgrp, headers=headers,verify=False,auth=HTTPBasicAuth('admin','password'))
     response_dict_grp = json.loads(response_grp.text)
 
-    response_edl = requests.request("GET", url_edl, headers=headers,verify=False,auth=HTTPBasicAuth('admin','123Cisco123'))
+    response_edl = requests.request("GET", url_edl, headers=headers,verify=False,auth=HTTPBasicAuth('admin','password'))
     response_dict_edl = json.loads(response_edl.text)
 
 
