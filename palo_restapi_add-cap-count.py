@@ -6,6 +6,19 @@ import json
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+
+#stores credential in variable defined in creds.txt file
+
+with open("creds.txt", mode='r', encoding="utf-8") as cred_file:
+    #userpass = cred_file.readlines()
+    userpass = [line.strip() for line in cred_file.readlines()]
+
+
+user_name = userpass[0]
+pass_word = userpass[1]
+
+
+
 #list the devices/hostnames here for the script to iterate login, for the sake of demonstration, I've listed the same firewall. But in usage, list all the IPs of the firewall here. 
 devices = ['192.168.100.27', '192.168.100.27']
 
@@ -25,13 +38,13 @@ for device in devices:
 
 
     #define the https request and store them as dictionary value. This collects the Address, Address Gpoups, and EDL count of the firewall.
-    response_add = requests.request("GET", url_add, headers=headers,verify=False,auth=HTTPBasicAuth('admin','password'))
+    response_add = requests.request("GET", url_add, headers=headers,verify=False,auth=HTTPBasicAuth(user_name,pass_word))
     response_dict_add = json.loads(response_add.text)
 
-    response_grp = requests.request("GET", url_addgrp, headers=headers,verify=False,auth=HTTPBasicAuth('admin','password'))
+    response_grp = requests.request("GET", url_addgrp, headers=headers,verify=False,auth=HTTPBasicAuth(user_name,pass_word))
     response_dict_grp = json.loads(response_grp.text)
 
-    response_edl = requests.request("GET", url_edl, headers=headers,verify=False,auth=HTTPBasicAuth('admin','password'))
+    response_edl = requests.request("GET", url_edl, headers=headers,verify=False,auth=HTTPBasicAuth(user_name,pass_word))
     response_dict_edl = json.loads(response_edl.text)
 
 
