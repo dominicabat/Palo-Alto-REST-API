@@ -9,6 +9,7 @@ This project was made to explore Palo Alto's REST API automation
 import requests
 from requests.auth import HTTPBasicAuth
 import urllib3
+import csv
 import pprint
 import json
 ```
@@ -16,10 +17,10 @@ import json
 ## Code Documentation / Thought Process 
 [Technical Blog / Article](https://medium.com/@dominusabat/palo-alto-rest-api-address-capacity-count-0b2854b91951)
 
-## Update the list of devices
+## Update the list of devices through device_list.csv
 ```
-#define the list of hostnames/IP that the script will log into
-devices = ['192.168.100.27', '192.168.100.27']
+hostname_001,192.168.100.27
+hostname_002,192.168.100.28
 ```
 
 ## Define cred for auth
