@@ -16,12 +16,20 @@ import json
 ## Code Documentation / Thought Process 
 [Technical Blog / Article](https://medium.com/@dominusabat/palo-alto-rest-api-address-capacity-count-0b2854b91951)
 
-## Usage
+## Update the list of devices
 ```
 #define the list of hostnames/IP that the script will log into
 devices = ['192.168.100.27', '192.168.100.27']
+```
 
-#cmd:
+## Define cred for auth
+```
+admin
+p4ss
+```
+
+## Execute the script
+```
 py palo_restapi_add-cap-count.py
 ```
 
